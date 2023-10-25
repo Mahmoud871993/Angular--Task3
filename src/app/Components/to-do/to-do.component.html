@@ -1,0 +1,28 @@
+<div class="container-fluid bg-light g-2">
+<h5>To do list</h5>
+<form>
+ 
+      <input type="text" value="enter your task" name ="newtask" [(ngModel)]="task">
+      <input type="submit" value ="Add" (click)="add()">
+
+
+</form>
+</div>
+
+<div class="container-fluid bg-light g-2">
+   <ul>
+    <li *ngFor="let item of todolist">
+        {{item}}
+    <button class="btn btn-warning" type="submit" (click)="remove(item)">remove</button>
+     
+
+
+
+    </li>
+
+
+   </ul>
+
+</div>
+
+
